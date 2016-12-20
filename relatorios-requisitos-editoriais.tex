@@ -6,9 +6,12 @@
 
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc} %Usado para aceitar acentos
+\usepackage[T1]{fontenc}
 \usepackage[portuguese,brazilian]{babel} %Usado para definir o idioma
 %\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry} %Usado para modificar margens do documento
 \usepackage{multicol} %Permite que, quando necessário, utilize duas ou mais colunas em uma parte do texto
+\usepackage{color} %Habilita a utilização de cores
+\usepackage{lipsum}
 
 %###########################################################
 %PACOTES GRAFICOS
@@ -40,7 +43,118 @@
 
 \begin{document}
 
-\maketitle{titulo do documento}
+%### INICIO DA SEÇÃO DA PAGINA DE TITULO ###
+%### COMENTE TODAS CASO NAO QUEIRA PAGINA DE TITULO ###
+
+%\maketitle
+
+\begin{titlepage}
+	\begin{center}
+	
+	\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figuras/logo-ufal.png}
+	\end{figure}
+
+		%\Huge{Universidade Federal de Alagoas}\\
+		\large{Mestrado em Modelagem computacional do conhecimento}\\ 
+		\large{Leitura e Escrita de Trabalho Científico}\\ 
+		\vspace{15pt}
+        \vspace{95pt}
+        \textbf{\LARGE{Gerência e configuração de thin switches}}\\
+		%\title{{\large{Alejandro - Relatório 01 - Gerência e configuração de thin switches}}}
+		\vspace{3,5cm}
+	\end{center}
+	
+	\begin{flushleft}
+		\begin{tabbing}
+			Aluno: César Felipe Gonçalves da Silva\\
+			Professor orientador: Professor Doutor Rafael Amorim Silva \\
+			\end{tabbing}
+ \end{flushleft}
+	\vspace{1cm}
+	
+	\begin{center}
+		\vspace{\fill}
+			 Dezembro\\
+		 2016
+			\end{center}
+\end{titlepage}
+
+%### FIM DA SEÇÃO DA PAGINA DE TITULO ###
+
+
+
+%### INICIO DA SEÇÃO DA FOLHA DE ROSTO ###
+%### COMENTE TODAS CASO NAO QUEIRA FOLHA DE ROSTO ###
+
+\begin{titlepage}
+	\begin{center}
+	
+	\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figuras/logo-ufal.png}
+	\end{figure}
+
+		%\Huge{Universidade Federal de Alagoas}\\
+		\large{Mestrado em Modelagem computacional do conhecimento}\\ 
+		\large{Leitura e Escrita de Trabalho Científico}\\ 
+\vspace{15pt}
+        
+        \vspace{85pt}
+        
+		\textbf{\LARGE{Relatório}}
+		\title{\large{Título}}
+	%	\large{Modelo\\
+     %   		Validação do modelo clássico}
+			
+	\end{center}
+\vspace{1,5cm}
+	
+	\begin{flushright}
+
+   \begin{list}{}{
+      \setlength{\leftmargin}{4.5cm}
+      \setlength{\rightmargin}{0cm}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\labelsep}{\leftmargin}}
+
+      \item Primeiro Relatório da Disciplina Leitura e Escrita de Trabalho Científico.
+
+      \begin{list}{}{
+      \setlength{\leftmargin}{0cm}
+      \setlength{\rightmargin}{0cm}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\labelsep}{\leftmargin}}
+
+			\item Aluno: César Felipe Gonçalves da Silva\
+            \item Professor orientador: Professor Doutor Rafael Amorim Silva\
+      		
+
+      \end{list}
+   \end{list}
+\end{flushright}
+\vspace{1cm}
+\begin{center}
+		\vspace{\fill}
+		 Dezembro\\
+		 2016
+			\end{center}
+\end{titlepage}
+
+%### FIM DA SEÇÃO DE FOLHA DE ROSTO ###
+
+%### INICIO DA SEÇÃO DE SUMÁRIO ###
+%### COMENTE TODAS CASO NAO QUEIRA SUMÁRIO ###
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+%### FIM DA SEÇÃO DE SUMÁRIO ###
+
+
 
 \begin{abstract}
 texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract
@@ -99,6 +213,12 @@ Maria & 4.0 & 6.0 & 5.0 \\ \hline
 
 \end{tabular}
 \end{center}
+
+\newpage %Use isto sempre que quiser criar uma nova pagina
+Aqui vem o conteudo da primeira pagina nova criada
+
+\newpage %Use isto caso queira criar mais uma outr pagina, fora a que ja foi criada acima
+Aqui vem o conteudo da segunda pagina nova criada
 
 
 \end{document}

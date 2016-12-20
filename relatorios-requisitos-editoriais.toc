@@ -1,0 +1,4 @@
+\select@language {brazilian}
+\contentsline {section}{\numberline {1}Primeira se\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {subsection}{\numberline {1.1}Subse\IeC {\c c}\IeC {\~a}o da primeira se\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}blocos de codigos uteis}{2}
