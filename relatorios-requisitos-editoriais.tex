@@ -1,4 +1,3 @@
-%preamble
 \documentclass[12pt,a4paper]{article}
 
 %###########################################################
@@ -6,9 +5,21 @@
 
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc} %Usado para aceitar acentos
-\usepackage[portuguese,brazilian]{babel} %Usado para definir o idioma
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel} %Usado para definir o idioma
 %\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry} %Usado para modificar margens do documento
 \usepackage{multicol} %Permite que, quando necessário, utilize duas ou mais colunas em uma parte do texto
+\usepackage{color} %Habilita a utilização de cores
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+
+%###########################################################
+%PACOTES REFERENCIAS BIBLIOGRAFICAS
+
+\usepackage{cite}
+\usepackage{apacite}
 
 %###########################################################
 %PACOTES GRAFICOS
@@ -40,13 +51,130 @@
 
 \begin{document}
 
-\maketitle{titulo do documento}
+%### INICIO DA SEÇÃO DA PAGINA DE TITULO ###
+%### COMENTE TODAS CASO NAO QUEIRA PAGINA DE TITULO ###
+
+%\maketitle
+
+\begin{titlepage}
+	\begin{center}
+	
+	\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figuras/logo-ufal.png} %ou use "logo-ufal-recente.png" para utilizar outra logo
+	\end{figure}
+
+		%\Huge{Universidade Federal de Alagoas}\\
+		\large{Mestrado em Modelagem computacional do conhecimento}\\ 
+		\large{Leitura e Escrita de Trabalho Científico}\\ 
+		\vspace{15pt}
+        \vspace{95pt}
+        \textbf{\LARGE{Gerência e configuração de thin switches}}\\
+		%\title{{\large{Alejandro - Relatório 01 - Gerência e configuração de thin switches}}}
+		\vspace{3,5cm}
+	\end{center}
+	
+	\begin{flushleft}
+		\begin{tabbing}
+			Aluno: César Felipe Gonçalves da Silva\\
+			Professor orientador: Professor Doutor Rafael Amorim Silva \\
+			\end{tabbing}
+ \end{flushleft}
+	\vspace{1cm}
+	
+	\begin{center}
+		\vspace{\fill}
+			 Dezembro\\
+		 2016
+			\end{center}
+\end{titlepage}
+
+%### FIM DA SEÇÃO DA PAGINA DE TITULO ###
+
+
+
+%### INICIO DA SEÇÃO DA FOLHA DE ROSTO ###
+%### COMENTE TODAS CASO NAO QUEIRA FOLHA DE ROSTO ###
+
+\begin{titlepage}
+	\begin{center}
+	
+	\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figuras/logo-ufal.png}  %ou use "logo-ufal-recente.png" para utilizar outra logo
+	\end{figure}
+
+		%\Huge{Universidade Federal de Alagoas}\\
+		\large{Mestrado em Modelagem computacional do conhecimento}\\ 
+		\large{Leitura e Escrita de Trabalho Científico}\\ 
+\vspace{15pt}
+        
+        \vspace{85pt}
+        
+		\textbf{\LARGE{Relatório}}
+		\title{\large{Título}}
+	%	\large{Modelo\\
+     %   		Validação do modelo clássico}
+			
+	\end{center}
+\vspace{1,5cm}
+	
+	\begin{flushright}
+
+   \begin{list}{}{
+      \setlength{\leftmargin}{4.5cm}
+      \setlength{\rightmargin}{0cm}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\labelsep}{\leftmargin}}
+
+      \item Primeiro Relatório da Disciplina Leitura e Escrita de Trabalho Científico.
+
+      \begin{list}{}{
+      \setlength{\leftmargin}{0cm}
+      \setlength{\rightmargin}{0cm}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\labelsep}{\leftmargin}}
+
+			\item Aluno: César Felipe Gonçalves da Silva\
+            \item Professor orientador: Professor Doutor Rafael Amorim Silva\
+      		
+
+      \end{list}
+   \end{list}
+\end{flushright}
+\vspace{1cm}
+\begin{center}
+		\vspace{\fill}
+		 Dezembro\\
+		 2016
+			\end{center}
+\end{titlepage}
+
+%### FIM DA SEÇÃO DE FOLHA DE ROSTO ###
+
+%### INICIO DA SEÇÃO DE SUMÁRIO ###
+%### COMENTE TODAS CASO NAO QUEIRA SUMÁRIO ###
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+%### FIM DA SEÇÃO DE SUMÁRIO ###
 
 \begin{abstract}
 texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract
 \end{abstract}
 
-\section{Primeira seção}
+
+\newpage %Use isto sempre que quiser criar uma nova pagina e observe que elas não aparecem no sumário. Apenas seções aparecem
+Aqui vem o conteudo da primeira pagina\footnote{é uma unidade de papel que compoe um documento} nova criada\footnote{O Verbo criar tem como significado gerar algo novo}
+
+\newpage %Use isto caso queira criar mais uma outr pagina, fora a que ja foi criada acima
+Use isto sempre que quiser criar uma nova pagina\footnote{é uma unidade de papel que compoe um documento} e observe que elas não aparecem no sumário. Apenas seções\footnote{São unidade de divisão de um documento que aparece no sumário} aparecem
+
+\newpage
+\section{Primeira seção: Itens, listas numeradas e listas descritivas}
 Conteudo da primeira seção
 
 \subsection{Subseção da primeira seção}
@@ -69,14 +197,23 @@ Conteudo da subseção da subseção da primeira seção
 \item[Primeiro item] primeira descrição
 \item[Segundo item] segunda descrição
 \end{description}
+\newpage
+
+\newpage
+\section{Segunda seção: Equações, colunas, figuras e tabelas}
 
 \begin{equation}
 e = mc^2
 \end{equation}
 
+
 \begin{multicols}{2} %o numero "2" indica que esta parte do texto usará 2 colunas
 Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas 
 \end{multicols}
+
+\paragraph{} Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...Aqui vem o conteudo de um paragrafo...
+
+\paragraph{}Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...Aqui vem o conteudo de outro paragrafo...
 
 \includegraphics[width=0.8\textwidth]{figuras/q1.PNG} % o Valor 0.8 indica que o grafico terá 80% do tamanho "entre margens" do documento e a parte "figuras/q1.PNG" indica que o arquivo "q1.PNG" esta dentro da pasta "figuras" (que tem que estar dentro da pasta onde se esta salvando o arquivo .TEX)
 
@@ -97,8 +234,24 @@ Daiane & 10.0 & 10.0 & 10.0 \\
 Maria & 4.0 & 6.0 & 5.0 \\ \hline
 & & Media geral & 7.75 \\ \hline
 
+
 \end{tabular}
 \end{center}
 
+\newpage
+\section{Terceira seção: Utilizando bibliografia}
+
+Veja abaixo como usa bibliografia:
+
+
+Como descrito na obra de Kurose \cite{kurose}
+
+E como fala o cara que escreveu o artigo 1 \cite{artigo1}
+
+ou o cara do artigo 2 \cite{artigo2}
+
+%### SEÇÃO DA BIBLIOGRAFIA ###
+\bibliographystyle{apacite}
+\bibliography{bibliografia}
 
 \end{document}

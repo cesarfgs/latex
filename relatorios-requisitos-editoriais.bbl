@@ -1,0 +1,73 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+J.~da silva%
+}{%
+J.~da silva%
+}{%
+{\protect \APACyear {1975}}%
+}]{%
+artigo1}
+\APACinsertmetastar {%
+artigo1}%
+\begin{APACrefauthors}%
+da silva, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1975}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Titulo da bibliografia um} {Titulo da bibliografia
+  um}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Jornal do artigo 1}{1}{1}{6-10}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+M.~da silva%
+}{%
+M.~da silva%
+}{%
+{\protect \APACyear {1976}}%
+}]{%
+artigo2}
+\APACinsertmetastar {%
+artigo2}%
+\begin{APACrefauthors}%
+da silva, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1976}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Titulo da bibliografia dois} {Titulo da bibliografia
+  dois}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Jornal do artigo 2}{2}{2}{11-20}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kurose%
+}{%
+Kurose%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+kurose}
+\APACinsertmetastar {%
+kurose}%
+\begin{APACrefauthors}%
+Kurose, J\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2005}.
+\newblock
+\APACrefbtitle {Computer Networking: A Top-Down Approach Featuring the
+  Internet, 3/E} {Computer networking: A top-down approach featuring the
+  internet, 3/e}.
+\newblock
+\APACaddressPublisher{}{Pearson Education India}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
