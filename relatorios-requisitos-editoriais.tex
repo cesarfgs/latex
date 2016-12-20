@@ -1,0 +1,104 @@
+%preamble
+\documentclass[12pt,a4paper]{article}
+
+%###########################################################
+%PACOTES DE IDIOMA, ACENTUAÇÃO E FORMATAÇÃO DO DOCUMENTO
+
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc} %Usado para aceitar acentos
+\usepackage[portuguese,brazilian]{babel} %Usado para definir o idioma
+%\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry} %Usado para modificar margens do documento
+\usepackage{multicol} %Permite que, quando necessário, utilize duas ou mais colunas em uma parte do texto
+
+%###########################################################
+%PACOTES GRAFICOS
+
+\usepackage{graphicx} %Usado para permitir importar imagens
+\usepackage[font={small}, labelfont={bf}, margin=1cm]{caption} %Usado para legenda de figuras
+\usepackage{float} %para ser usado com o parametro H da caracteristica da figura. Permite inserir a figura forçosamente onde se deseja
+
+%###########################################################
+%PACOTES MATEMATICOS
+
+\usepackage{amsmath} %Usado para permitir informações matemáticas
+\usepackage{amsfonts} %Usado para permitir informações matemáticas
+\usepackage{amssymb} %Usado para permitir informações matemáticas
+
+%###########################################################
+%DADOS DO AUTOR E DO DOCUMENTO
+
+\title{Meu documento}
+\author{César Felipe Gonçalves da Silva}
+\date{19 de dezembro de 2016}
+
+%###########################################################
+%INICIO DO CORPO DO TEXTO
+
+%###########################################################
+%### Observação: A parte acima vai em todo novo documento###
+%###########################################################
+
+\begin{document}
+
+\maketitle{titulo do documento}
+
+\begin{abstract}
+texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract
+\end{abstract}
+
+\section{Primeira seção}
+Conteudo da primeira seção
+
+\subsection{Subseção da primeira seção}
+Conteudo da subseção da primeira seção
+
+\subsubsection{blocos de codigos uteis}
+Conteudo da subseção da subseção da primeira seção
+
+\begin{itemize}
+\item primeiro item pontificado
+\item segundo item pontificado
+\end{itemize}
+
+\begin{enumerate}
+\item primeiro item enumerado
+\item segundo item enumerado
+\end{enumerate}
+
+\begin{description}
+\item[Primeiro item] primeira descrição
+\item[Segundo item] segunda descrição
+\end{description}
+
+\begin{equation}
+e = mc^2
+\end{equation}
+
+\begin{multicols}{2} %o numero "2" indica que esta parte do texto usará 2 colunas
+Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas Texto em duas colunas 
+\end{multicols}
+
+\includegraphics[width=0.8\textwidth]{figuras/q1.PNG} % o Valor 0.8 indica que o grafico terá 80% do tamanho "entre margens" do documento e a parte "figuras/q1.PNG" indica que o arquivo "q1.PNG" esta dentro da pasta "figuras" (que tem que estar dentro da pasta onde se esta salvando o arquivo .TEX)
+
+\begin{center}
+\begin{tabular}{l|c|c|r} 
+% Observacao 01: "LCCR" indica que a tabela tera 4 colunas, sendo a primeira alinhada à esquerda, as duas seguintes serão centralizadas e a ultima alinhada à direta
+
+%% Observacao 02: Bote | Entre as definições de alinhamento das colunas para informar se haverá linha vertical entre as colunas
+
+%Observação 03: Use \hline ao fim de cada linha para informar se haverá linha horizontal entre as linhas
+
+%Observação 04: Use "&" para separar colunas e use \\ para iniciar nova linha
+
+\hline
+Aluno & Nota 1 & Nota 2 & Média \\ \hline
+César & 8.0 & 9.0 & 8.5 \\ 
+Daiane & 10.0 & 10.0 & 10.0 \\
+Maria & 4.0 & 6.0 & 5.0 \\ \hline
+& & Media geral & 7.75 \\ \hline
+
+\end{tabular}
+\end{center}
+
+
+\end{document}
